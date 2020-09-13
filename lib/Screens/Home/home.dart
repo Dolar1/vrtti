@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:vrtti/Screens/Home/Widgets/appbar.dart';
 import 'package:vrtti/Screens/Home/Widgets/total_course.dart';
 import 'package:vrtti/Screens/Home/Widgets/single_course_tile.dart';
+import 'package:vrtti/Themes/colors.dart';
+
+import 'Widgets/language_tile.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -52,23 +55,29 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               )),
-          SizedBox(height: 10.0),
-          GridView.count(
-            crossAxisCount: 2,
-            primary: false,
-            crossAxisSpacing: 2.0,
-            mainAxisSpacing: 4.0,
-            shrinkWrap: true,
-            children: <Widget>[
-              SingleTile(name: "Dolar", status: "Away", cardIndex: 1),
-              SingleTile(name: "Dolar", status: "Away", cardIndex: 2),
-              SingleTile(name: "Dolar", status: "Awayw", cardIndex: 3),
-              SingleTile(name: "Dolar", status: "Awayw", cardIndex: 4),
-              SingleTile(name: "Dolar", status: "Awayw", cardIndex: 4),
-            ],
-          )
+          SizedBox(height: 20.0),
+          LanguageTile(index: 4),
+          LanguageTile(index: 4),
+          LanguageTile(index: 4),
+          LanguageTile(index: 4),
         ],
       ),
     );
   }
 }
+
+// GridView.count(
+//   crossAxisCount: 2,
+//   primary: false,
+//   crossAxisSpacing: 2.0,
+//   mainAxisSpacing: 4.0,
+//   shrinkWrap: true,
+//   children: <Widget>[
+
+//   ],
+// )
+// SingleTile(name: "Dolar", status: "Away", cardIndex: 1),
+// SingleTile(name: "Dolar", status: "Away", cardIndex: 2),
+// SingleTile(name: "Dolar", status: "Awayw", cardIndex: 3),
+// SingleTile(name: "Dolar", status: "Awayw", cardIndex: 4),
+// SingleTile(name: "Dolar", status: "Awayw", cardIndex: 4),

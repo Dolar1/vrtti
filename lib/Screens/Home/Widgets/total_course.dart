@@ -1,50 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:vrtti/Screens/Home/request_new.dart';
+import 'package:vrtti/Screens/Home/Widgets/heart.dart';
+import 'package:vrtti/Screens/Home/Widgets/request_new.dart';
 import 'package:vrtti/Themes/colors.dart';
 
 class TotalCoursesContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget heart() => Stack(
-          children: <Widget>[
-            RotationTransition(
-              turns: new AlwaysStoppedAnimation(12 / 360),
-              child: Container(
-                padding: EdgeInsets.only(left: 2.5, top: 0.0),
-                child: Icon(
-                  Icons.favorite,
-                  color: Colors.red,
-                  size: 20,
-                ),
-              ),
-            ),
-            RotationTransition(
-              turns: new AlwaysStoppedAnimation(-8 / 360),
-              child: Container(
-                padding: EdgeInsets.only(top: 8.0, right: 3.0),
-                child: Stack(
-                  children: <Widget>[
-                    Positioned(
-                      left: 0.0,
-                      bottom: 0.0,
-                      child: Icon(
-                        Icons.favorite,
-                        color: Colors.white,
-                        size: 20,
-                      ),
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.red,
-                      size: 18,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        );
-
     return Container(
       margin: EdgeInsets.fromLTRB(25.0, 90.0, 25.0, 0.0),
       decoration: BoxDecoration(
@@ -82,7 +43,7 @@ class TotalCoursesContainer extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 1),
-                    heart(),
+                    Heart(),
                   ],
                 ),
               ),
