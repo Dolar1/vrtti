@@ -7,7 +7,7 @@ class TotalCoursesContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(25.0, 90.0, 25.0, 0.0),
+      margin: EdgeInsets.fromLTRB(25.0, 130.0, 25.0, 0.0),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20.0),

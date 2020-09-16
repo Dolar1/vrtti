@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vrtti/Screens/BottomNavigation/animated_bottom_bar.dart';
-import 'package:vrtti/Screens/Home/home_holder.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class BottomBarNavigationPatternExample extends StatefulWidget {
   final List<BarItem> barItems = [
     BarItem(
       text: "Home",
@@ -31,24 +25,31 @@ class _HomePageState extends State<HomePage> {
     ),
   ];
 
+  @override
+  _BottomBarNavigationPatternExampleState createState() =>
+      _BottomBarNavigationPatternExampleState();
+}
+
+class _BottomBarNavigationPatternExampleState
+    extends State<BottomBarNavigationPatternExample> {
   int selectedBarIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomeHolder(),
-      bottomNavigationBar: AnimatedBottomBar(
-        barItems: barItems,
-        animationDuration: const Duration(milliseconds: 150),
-        barStyle: BarStyle(fontSize: 20.0, iconSize: 30.0),
-        onBarTap: (index) {
-          setState(
-            () {
-              selectedBarIndex = index;
-            },
-          );
-        },
+      body: AnimatedContainer(
+        color: widget.barItems[selectedBarIndex].color,
+        duration: const Duration(milliseconds: 300),
       ),
+      bottomNavigationBar: AnimatedBottomBar(
+          barItems: widget.barItems,
+          animationDuration: const Duration(milliseconds: 150),
+          barStyle: BarStyle(fontSize: 15.0, iconSize: 25.0),
+          onBarTap: (index) {
+            setState(() {
+              selectedBarIndex = index;
+            });
+          }),
     );
   }
 }

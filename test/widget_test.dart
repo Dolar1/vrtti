@@ -28,3 +28,19 @@ void main() {
     expect(find.text('1'), findsOneWidget);
   });
 }
+
+// GridView.count(
+//   crossAxisCount: 2,
+//   primary: false,
+//   crossAxisSpacing: 2.0,
+//   mainAxisSpacing: 4.0,
+//   shrinkWrap: true,
+//   children: <Widget>[
+
+//   ],
+// )
+// SingleTile(name: "Dolar", status: "Away", cardIndex: 1),
+// SingleTile(name: "Dolar", status: "Away", cardIndex: 2),
+// SingleTile(name: "Dolar", status: "Awayw", cardIndex: 3),
+// SingleTile(name: "Dolar", status: "Awayw", cardIndex: 4),
+// SingleTile(name: "Dolar", status: "Awayw", cardIndex: 4),

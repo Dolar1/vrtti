@@ -56,10 +56,10 @@ class LanguageTile extends StatelessWidget {
                         color: Colors.white,
                         style: BorderStyle.solid),
                   ),
-                  child: Image.asset(
-                    'assets/icons/language/node.png',
-                    height: 70,
-                    width: 70,
+                  child: CircleAvatar(
+                    radius: 35,
+                    backgroundImage:
+                        AssetImage('assets/icons/language/node.png'),
                   ),
                 ),
                 const SizedBox(width: 10),
