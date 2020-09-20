@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vrtti/Screens/Drawer/drawer.dart';
-import 'package:vrtti/Screens/Home/Widgets/appbar.dart';
 import 'package:vrtti/Screens/Home/Widgets/language_tile.dart';
 import 'package:vrtti/Screens/Home/Widgets/total_course.dart';
 
@@ -49,36 +47,7 @@ class _HomeHolderState extends State<HomeHolder> {
 
     return Scaffold(
       key: _scaffoldKey,
-      // appBar: homeAppBar(_scaffoldKey),
-      // drawer: DrawerScreen(),
       body: mainPageListView(),
     );
   }
 }
-
-/**
- * 
- * Container(
-                padding: EdgeInsets.only(left: 25.0, right: 25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      'MY COACHES',
-                      style: TextStyle(
-                          color: Colors.grey,
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12.0),
-                    ),
-                    Text(
-                      'VIEW PAST SESSIONS',
-                      style: TextStyle(
-                          color: Colors.green,
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12.0),
-                    )
-                  ],
-                )),
- */

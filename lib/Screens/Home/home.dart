@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vrtti/Screens/AboutUs/about_us.dart';
 import 'package:vrtti/Screens/BottomNavigation/animated_bottom_bar.dart';
 import 'package:vrtti/Screens/Home/home_holder.dart';
 
@@ -8,6 +9,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<Widget> homeView = [
+    HomeHolder(),
+    HomeHolder(),
+    HomeHolder(),
+    AboutUs(),
+  ];
+
   final List<BarItem> barItems = [
     BarItem(
       text: "Home",
@@ -25,8 +33,8 @@ class _HomePageState extends State<HomePage> {
       color: Colors.yellow.shade900,
     ),
     BarItem(
-      text: "Profile",
-      iconData: Icons.person_outline,
+      text: "About",
+      iconData: Icons.supervised_user_circle,
       color: Colors.teal,
     ),
   ];
@@ -36,17 +44,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomeHolder(),
+      body: homeView[selectedBarIndex],
       bottomNavigationBar: AnimatedBottomBar(
         barItems: barItems,
         animationDuration: const Duration(milliseconds: 150),
         barStyle: BarStyle(fontSize: 20.0, iconSize: 30.0),
         onBarTap: (index) {
-          setState(
-            () {
-              selectedBarIndex = index;
-            },
-          );
+          setState(() {selectedBarIndex = index;});
         },
       ),
     );
